@@ -1,0 +1,24 @@
+<ul>
+	<li> Nom :<strong> {{info.nom}} </strong></li>
+	<li>Email: {{info.email}} </li>
+	<li>Tel : {{info.tel}}</li>
+</ul>
+<form>
+
+	<label > Messages :</label>
+	<input type="text" [(ngModel)]="commentaires.message">
+	<button [disabled]="!commentaire.message" (click)="onAddCommentaire()">Ajouter commentaire </button>
+</form>
+
+
+
+
+<div>
+	<ul>
+<li *ngFor="let c of comments">
+
+{{c.message}}
+<span>{{c.date|date:'dd/mm/yyyy:HH:mm:ss'}}</span>
+       </li>
+	</ul>
+</div>
