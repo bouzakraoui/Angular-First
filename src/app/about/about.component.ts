@@ -19,10 +19,15 @@ comments=[
 ];
 
 
-commentaires={date:null,message:""};
+commentaires={date:null,message:" "};
 
- onAddCommentaire(){
-this.comments.push(this.commentaires);
+ onAddCommentaire(c){
+   console.log(c);
+   c.date=new Date();
+   this.comments.push(c);
+
+   this.commentaires=""
+
 
   }
 
